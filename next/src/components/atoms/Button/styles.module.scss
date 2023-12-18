@@ -1,0 +1,9 @@
+.wrapper {
+  @media (max-width: 499px) {
+    width: 100%;
+  }
+  &:disabled {
+    opacity: .8;
+    pointer-events: none;
+  }
+}

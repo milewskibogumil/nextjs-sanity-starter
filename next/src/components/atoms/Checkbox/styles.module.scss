@@ -1,0 +1,51 @@
+.label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  > span {
+    grid-column: 3/1;
+    margin-left: auto;
+  }
+  cursor: pointer;
+  &:has(input:focus-visible) .icon {
+    outline: 1px solid var(--secondary-900);
+    outline-offset: 5px;
+  }
+  &:hover {
+    .icon {
+      border-color: var(--secondary-400);
+    }
+  }
+  &[aria-invalid="true"]{
+    .icon {
+      border: 1px solid var(--error-400);
+    }
+  }
+}
+.icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  padding: 5px;
+  border: 1px solid var(--secondary-900);
+  transition: border-color .5s;
+  input {
+    position: absolute;
+    opacity: 0;
+    &:checked {
+      + svg {
+        stroke-dashoffset: 32;
+      }
+    }
+  }
+  &:has(input:checked){
+    border-color: var(--secondary-400);
+  }
+  svg {
+    stroke-dasharray: 16;
+    stroke-dashoffset: 16;
+    transition: stroke-dashoffset .8s var(--easing);
+  }
+}
