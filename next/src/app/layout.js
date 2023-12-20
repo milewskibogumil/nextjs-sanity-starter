@@ -14,8 +14,22 @@ const Poppins = localFont({
       style: 'normal',
     },
   ],
+  display: 'swap',
   fallback: ['sans-serif'],
 })
+// // Add varaible font
+// const CinzelDecorative = localFont({
+//   src: [
+//     {
+//       path: '../assets/fonts/CinzelDecorative-Regular.woff2',
+//       weight: '400',
+//       style: 'normal',
+//     }
+//   ],
+//   display: 'swap',
+//   fallback: ['sans-serif'],
+//   variable: '--cinzel-decorative',
+// })
 
 // // Change themeColor to a color that matches the design
 // export const viewport = {
